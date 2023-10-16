@@ -1,2 +1,7 @@
-# praktyki-wp-2023-ropzenn
-Praktyki ZSEIT w Olsztynie z firmą WP
+# PRACA NA PRAKTYKI WP - Oliwier Kisiel ZSEIT
+
+| Tydzien | Co zostało zrobione? |
+| --- | --- |
+| Tydzień 1 | Stworzenie Readme , gitignore oraz pierwsze próby stworzenia programu w Pythonie |
+| Tydzień 2 | Edycja Readme , stworzenie plicku "dockerfile" oraz skończenie pracowania nad programem w Pythonie |
+| Tydzień 3 | ... |
