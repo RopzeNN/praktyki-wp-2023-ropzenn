@@ -13,7 +13,7 @@ jobs:
     - name: Docker file image
       run: docker build -f Dockerfile.dockerfile .\
     - name: Building container
-      run: docker run --name dockercontainer dockerimage
+      run: docker run --name dockercontainer Dockerimage
     - name: Copying main.exe
       run: docker cp dockercontainer:/praktyki-wp-2023-ropzenn/dist/main.exe ${PWD}
 
