@@ -1,4 +1,4 @@
-name: Dockerfile
+name: Docker file
 
 on: [push]
 
@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Docker file image
-      run: docker build --pull --rm -f "Dockerfile" -t dockerimage "."
+      run: docker build --pull --rm -f "Docker file" -t dockerimage "."
     - name: Building container
       run: docker run --name dockercontainer dockerimage
     - name: Copying main.exe
