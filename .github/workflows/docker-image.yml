@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Docker file image
-      run: docker build -t praktyki:latest -f Dockerfile.dockerfile .\
+      run: docker build -a -f Dockerfile.dockerfile .\
     - name: Building container
       run: docker run --name dockercontainer dockerimage
     - name: Copying main.exe
