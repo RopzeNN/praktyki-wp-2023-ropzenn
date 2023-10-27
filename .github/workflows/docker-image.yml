@@ -1,0 +1,36 @@
+name: Dockerfile
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    permissions: write-all
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Docker file image
+      run: docker build --pull --rm -f "Dockerfile" -t dockerimage "."
+    - name: Building container
+      run: docker run --name dockercontainer dockerimage
+    - name: Copying program.exe
+      run: docker cp dockercontainer:/Wp-Zadanie/dist/program.exe ${PWD}
+
+    - name: Create Github release
+      id: create-new-release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.run_number }}
+        release_name: Release ${{ github.run_number }}
+    - name: Upload release asset   
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create-new-release.outputs.upload_url }}
+        asset_path: ./program.exe
+        asset_name: program-v${{ github.run_number }}.exe
+        asset_content_type: application/octet-stream
