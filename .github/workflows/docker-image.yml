@@ -9,7 +9,7 @@ jobs:
     permissions: write-all
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Docker file image
       run: docker build -f Dockerfile.dockerfile .\
     - name: pyinstaller 
