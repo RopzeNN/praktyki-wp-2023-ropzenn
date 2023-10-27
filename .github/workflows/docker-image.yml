@@ -19,7 +19,7 @@ jobs:
     - name: build .exe
       run: pyinstaller --onefile main.py
 
-      name: Download a single artifact
+    - name: Download a single artifact
       uses: actions/upload-artifact@v3.1.3
       with:
         name: main
