@@ -22,5 +22,5 @@ jobs:
       name: Download a single artifact
       uses: actions/upload-artifact@v3.1.3
       with:
-        name: aplikacja
+        name: main
         path: D:\a\praktyki-wp-2023-ropzenn\praktyki-wp-2023-ropzenn\dist\main.exe
