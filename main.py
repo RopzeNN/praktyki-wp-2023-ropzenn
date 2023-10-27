@@ -40,6 +40,6 @@ def main():
     print('Cena produktu:', price)
     print('Ocena produktu:', rating)
 
-    input("Wciśnij enter aby kontynuować...")
+    input("Wciśnij enter aby zakończyć...")
 
 main()
