@@ -1,5 +1,5 @@
 # Użyj oficjalnego obrazu Pythona 3.x
-FROM python:3.x
+FROM winamd64/python
 
 # Ustaw katalog roboczy w kontenerze
 WORKDIR /app
